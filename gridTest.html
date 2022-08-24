@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <style>
+        table {
+          margin: auto;
+          border-spacing: 0;
+        }
+        td, tr {
+          border: 1px dotted black;
+        }
+        body{
+          margin: 0;
+          background-color: lightgray
+        }
+      </style>
+  </head>
+
+  <body>
+    <table id="myTable"></table>
+
+    <script>
+      console.log("Hello DJ")
+      console.log(myTable);
+      table_make()
+
+        function table_make() {
+            var row = parseInt(window.innerHeight/100);
+            var col = parseInt(window.innerWidth/100);
+            var myTable = document.getElementById('myTable')
+
+            for (var i = 0; i < row; i++) {
+              var row_cell = document.createElement("tr")
+              myTable.appendChild(row_cell)
+              for (var j = 0; j < col; j++) {
+                var col_cell = document.createElement("td")
+                col_cell.style.width = '100px';
+                col_cell.style.height = '100px';
+                row_cell.appendChild(col_cell)
+              }
+            }
+        }
+      </script>
+
+  </body>
+</html>
