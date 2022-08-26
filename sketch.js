@@ -1,11 +1,13 @@
+//play.js 기본형식
+
 let Ani;
 
 function setup() {
 	createCanvas(720, 400);
-	Ani = loadAni('./tst01.png', 7);
+	Ani = loadAni('./tst001.png', 7);
 }
 
 function draw() {
-	// clear();
-	// animation(Ani, 250, 80);
+	clear();
+	animation(Ani, 250, 80);
 }
