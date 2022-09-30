@@ -21,14 +21,13 @@ function preload() {
 
 	// 1~3 사이 난수로 가공 (확률은 1이 약간 더 많이 나옴)
 	r = r % 3 + 1
-
 }
 
 function setup() {
 	//캔버스 사이즈
 	var cnv = createCanvas(windowWidth, windowHeight);
   // p5play를 쓰면 아래 코드가 안먹어서 주석처리함. 대신 css에서 viewport로 손댐
-	// cnv.style('display', 'block');
+	cnv.style('display', 'block');
 
 	//x y값은 화면 중앙
 	x = width / 2;
@@ -76,7 +75,7 @@ function draw() {
 	animation(img, x, y);
 	Set1.frameDelay = 15;
 	Set2.frameDelay = 15;
-	console.log("r=", r, "i=", i, "j=", j);
+	// console.log("r=", r, "i=", i, "j=", j);
 }
 
 function mousePressed() {

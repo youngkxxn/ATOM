@@ -8,7 +8,9 @@ let overImg = false;
 let clicked = false;
 
 function preload() {
-	img = loadAni('./tst001.png', 7);
+	img = loadAni('./set1_001.png', 7);
+
+	img.frameDelay = 20;
 }
 
 function setup() {
@@ -37,6 +39,7 @@ function draw() {
 	if (img.frame == img.lastFrame) {
 		img.frame = 5;
 	}
+
 
 	animation(img, 200, 200);
 }
