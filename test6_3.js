@@ -38,14 +38,15 @@ function draw() {
       }
     }
   }
-
-  console.log(s[i])
-  allSprites.debug = mouse.pressing();
+  // console.log(s[i])
+  // allSprites.debug = mouse.pressing();
 }
 
 function mousePressed() {
   let _t = new Sprite(mouse.x, 0, 20);
   _t.addAni('normal', './set1_001.png', 7);
+  // _t.ani.frameDelay = 40;
   _t.addAni('falling', './set2_001.png', 4);
+  // _t.ani.frameDelay = 40;
   s.push(_t);
 }
