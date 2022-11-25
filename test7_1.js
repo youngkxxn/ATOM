@@ -2,6 +2,7 @@
 
 let tst;
 let i = 0;
+let a = [];
 let click = false;
 let cyc1 = false;
 let cyc2 = false;
@@ -25,6 +26,8 @@ function setup() {
 function draw() {
 	background('#f6f5f0');
 
+  i += 1;
+  text(frameCount, -10, -10);
 
   if(tst.ani.name == 'set1' && click && cyc1) {
     tst.ani = 'set2';
@@ -55,14 +58,15 @@ function draw() {
       }
     }
 
-
-
   // allSprites.debug = mouse.pressing();
-  console.log(tst.ani.name, 'c1=', cyc1, 'c2=', cyc2, 'c3=', cyc3)
+  // console.log(tst.ani.name, 'c1=', cyc1, 'c2=', cyc2, 'c3=', cyc3)
+  console.log(attackTime)
 }
 
 function mousePressed() {
-  click = true;
+  if (true) {
+    click = true;
+  }
 }
 
 function mouseReleased() {
