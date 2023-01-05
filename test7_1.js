@@ -10,22 +10,23 @@ function preload() {
   tst = new Sprite(250, 200, 200, 200, 'static');
   tst.addAni('bridge', './brd_001.png', 2);
   tst.addAni('set2', './set2_001.png', 3);
-  // tst.ani.frameDelay = 40;
+  // tst.ani.frameDelay = 30;
   tst.addAni('set3', './set3_001.png', 4);
-  // tst.ani.frameDelay = 20;
+  // tst.ani.frameDelay = 30;
   tst.addAni('set1', './set1_001.png', 5);
-  // tst.ani.frameDelay = 20;
+  // tst.ani.frameDelay = 30;
 }
 
 function setup() {
   createCanvas(500, 400);
-  frameRate(30);
+  frameRate(24);
 }
 
 function draw() {
 	background('#f6f5f0');
 
   if(tst.ani.name == 'set1' && click && cyc1) {
+    ini = false;
     tst.ani = ['set2', 'bridge'];
     tst.ani.play(0)
     cyc1 = false;
@@ -64,9 +65,7 @@ function draw() {
 }
 
 function mousePressed() {
-  if (true) {
     click = true;
-  }
 }
 
 function mouseReleased() {
